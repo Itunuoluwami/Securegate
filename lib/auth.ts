@@ -7,6 +7,7 @@ import { sendVerificationEmail } from "./mail";
 import { rateLimit } from "./rate-limit";
 
 export const authOptions: AuthOptions = {
+  secret: process.env.NEXTAUTH_SECRET,
   session: {
     strategy: "jwt",
   },

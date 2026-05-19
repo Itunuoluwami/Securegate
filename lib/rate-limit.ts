@@ -43,11 +43,7 @@ export async function rateLimit(ip: string, action: string): Promise<RateLimitRe
   const redisUrl = process.env.UPSTASH_REDIS_REST_URL;
   const redisToken = process.env.UPSTASH_REDIS_REST_TOKEN;
 
-  const hasUpstash =
-    redisUrl &&
-    redisUrl !== "https://your-upstash-redis-url.upstash.io" &&
-    redisToken &&
-    redisToken !== "your-upstash-redis-token";
+  const hasUpstash = !!(redisUrl && redisToken);
 
   if (hasUpstash) {
     try {
