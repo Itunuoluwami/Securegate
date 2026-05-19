@@ -2,6 +2,8 @@ import { db } from "@/lib/prisma";
 import Link from "next/link";
 import styles from "../verify-email.module.css";
 
+export const dynamic = "force-dynamic";
+
 interface VerifyEmailPageProps {
   params: {
     token: string;

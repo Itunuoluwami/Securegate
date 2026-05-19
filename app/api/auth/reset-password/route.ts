@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import { db } from "@/lib/prisma";
+
+export const dynamic = "force-dynamic";
 import bcrypt from "bcryptjs";
 import { rateLimit } from "@/lib/rate-limit";
 import * as z from "zod";

@@ -4,6 +4,8 @@ import { redirect } from "next/navigation";
 import LogoutButton from "./LogoutButton";
 import styles from "./dashboard.module.css";
 
+export const dynamic = "force-dynamic";
+
 export default async function DashboardPage() {
   const session = await getServerSession(authOptions);
 
